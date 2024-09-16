@@ -1,0 +1,39 @@
+---
+import github from '@assets/github.png'
+import microsoft from '@assets/microsoft.png'
+import redis from '@assets/redis.png'
+import paypal from '@assets/paypal.png'
+import linkedin from '@assets/linkedin.png'
+import reddit from '@assets/reddit.png'
+import medium from '@assets/medium.png'
+const companies = [github, microsoft, redis, paypal, linkedin, reddit, medium]
+import { Image } from 'astro:assets'
+---
+
+<section class="bg-secondary">
+	<div class="section_container flex flex-col py-16">
+		<h3 class="mb-3 text-center text-2xl font-bold md:text-3xl lg:text-4xl">
+			Companies That Recruit Our Graduates
+		</h3>
+		<p class="text-center md:text-lg">
+			Our graduates have worked in more than 400 companies around the World
+		</p>
+		<div
+			class="mx-auto mt-6 grid w-full max-w-sm grid-cols-1 items-center justify-items-center gap-8 sm:grid-cols-2 md:mt-12 md:max-w-xl md:grid-cols-4 lg:max-w-2xl"
+		>
+			{
+				companies.map((company, index) => (
+					<div class="w-full max-w-[10rem]">
+						<Image
+							src={company}
+							alt={`company ${index}`}
+							width={180}
+							height={180}
+							class="w-full bg-cover bg-center"
+						/>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

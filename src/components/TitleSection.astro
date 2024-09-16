@@ -1,0 +1,38 @@
+---
+import { cn } from '@utils/util'
+
+const { title, description, section, center } = Astro.props
+interface Props {
+	title: string
+	description: string
+	section: string
+	center?: boolean
+}
+---
+
+<div
+	class={cn({
+		'text-center': center
+	})}
+>
+	<h5 class="text-sm font-bold uppercase tracking-wide text-primary lg:text-base">
+		{section}
+	</h5>
+	<h3
+		class={cn(
+			'mb-5 mt-2 w-full max-w-xs text-2xl font-bold leading-snug md:max-w-sm md:text-3xl lg:max-w-md lg:text-4xl lg:leading-snug',
+			{
+				'mx-auto': center
+			}
+		)}
+	>
+		{title}
+	</h3>
+	<p
+		class={cn('w-full max-w-xs text-sm opacity-90 md:max-w-sm md:text-base', {
+			'mx-auto': center
+		})}
+	>
+		{description}
+	</p>
+</div>

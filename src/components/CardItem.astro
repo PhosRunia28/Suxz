@@ -1,0 +1,23 @@
+---
+import Btn from './Btn'
+interface Props {
+	image: ImageMetadata
+	title: string
+	description: string
+}
+const { image, title, description } = Astro.props
+import { Image } from 'astro:assets'
+---
+
+<div class="flex w-full max-w-[14rem] flex-col gap-4 rounded-xl bg-white px-6 py-4">
+	<Image
+		src={image}
+		alt="starter"
+		width={80}
+		height={80}
+		class="w-full max-w-[5rem] rounded-lg bg-cover bg-center"
+	/>
+	<h4 class="text-lg font-bold">{title}</h4>
+	<p class="w-full max-w-[12rem] text-sm leading-relaxed">{description}</p>
+	<Btn to="#" className="text-center text-sm"> See Class </Btn>
+</div>

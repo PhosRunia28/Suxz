@@ -1,0 +1,21 @@
+---
+import contactHero from '@assets/contact-hero.png'
+import Btn from './Btn'
+---
+
+<section
+	class="relative overflow-hidden bg-cover bg-center py-24"
+	style={{ backgroundImage: `url(${contactHero.src})` }}
+>
+	<div class="section_container absolute inset-0 z-20 bg-black opacity-50"></div>
+	<div class="relative z-30 flex flex-col gap-6 text-center text-white">
+		<h4 class="text-2xl font-bold md:text-3xl lg:text-4xl">So? What Are You Waiting For</h4>
+		<p class="lg:text-lg">
+			It's time to build your career, study in a relaxed and purposeful manner
+		</p>
+		<div class="mx-auto flex w-full max-w-xs items-center justify-between gap-4">
+			<Btn to="#" className="px-8 py-3"> Get Started </Btn>
+			<Btn outline to="#" className="border-0 bg-transparent px-8 py-3 text-white">Contact Us</Btn>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,17 @@
+---
+import TestimonialItem from './TestimonialItem.astro'
+import TitleSection from './TitleSection.astro'
+import { testimonials } from 'src/data'
+---
+
+<section class="section_container flex flex-col gap-10 py-16" id="testimonial">
+	<TitleSection
+		section="testimonials"
+		title="Our Alumni Say"
+		description="These are the words of people who have taken our class"
+		center
+	/>
+	<div class="container_section flex flex-wrap justify-center gap-8 lg:justify-between">
+		{testimonials.map((item) => <TestimonialItem item={item} />)}
+	</div>
+</section>

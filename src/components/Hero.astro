@@ -1,0 +1,31 @@
+---
+import Btn from './Btn'
+import { Image } from 'astro:assets'
+import hero from '@assets/hero.png'
+---
+
+<section class="container_section mb-10 mt-10 lg:mb-0" id="home">
+	<div class="flex flex-col-reverse items-center gap-8 lg:flex-row">
+		<div class="flex flex-1 flex-col gap-9">
+			<div class="flex flex-col gap-1">
+				<h4 class="text-sm font-bold uppercase tracking-wider text-primary md:text-base">
+					SUXZ MAKE IT EASY
+				</h4>
+				<h3 class="text-4xl font-bold leading-tight lg:text-5xl">
+					Find Your Way <br /> Of Success
+				</h3>
+			</div>
+			<p class="w-full max-w-md font-medium leading-relaxed md:text-lg">
+				We help you to increase self-confidence and train yourself in a direction, and make you more
+				creative in developing a work
+			</p>
+			<div class="flex flex-col gap-6 text-center sm:flex-row sm:items-center sm:text-left">
+				<Btn to="#" className="lg:px-10 lg:py-4">Get Started</Btn>
+				<Btn to="#" className="lg:px-10 lg:py-4" muted>Our Services</Btn>
+			</div>
+		</div>
+		<div class="w-[80%] sm:w-1/2">
+			<Image src={hero} alt="hero" width="2600" height="2500" />
+		</div>
+	</div>
+</section>

@@ -1,0 +1,22 @@
+---
+import { cardItems } from 'src/data'
+import CardItem from './CardItem.astro'
+import TitleSection from './TitleSection.astro'
+---
+
+<section class="bg-secondary" id="learnings">
+	<div class="container_section flex flex-col gap-8 py-16">
+		<TitleSection
+			section="learnings"
+			title="Online Learning Platform International Curriculum"
+			description="Study and understand the material class is more relaxed without time limit."
+		/>
+		<div class="flex flex-wrap justify-center gap-8 lg:justify-between">
+			{
+				cardItems.map((card) => (
+					<CardItem title={card.title} image={card.image} description={card.description} />
+				))
+			}
+		</div>
+	</div>
+</section>
